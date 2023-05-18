@@ -1,0 +1,116 @@
+.wrapper {
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    display: grid;
+    row-gap: 5px;
+}
+.item {
+    background-color: rgb(163, 205, 216);;
+    border: 2px solid   black;
+    border-radius: 5px;
+    padding: 20px;
+}
+section {
+    border: 2px solid black;
+    border-radius: 5px;    
+}
+.main {
+    padding: 20px;
+    background-color: #9A7EA6;
+    display: grid;
+    row-gap: 15px;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.sidebar {
+    background-color: #C4889F;
+    padding: 20px;
+    display: grid;
+    row-gap: 15px;    
+}
+.footer {
+    background-color: #FDE2B1;
+    padding: 20px;
+    display: grid;
+    row-gap: 15px;
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "one three four"
+        "one five five"
+        "two five five";
+        column-gap: 15px;        
+    }
+    .main-1 {
+        grid-area: one;
+    }
+    .main-2 {
+        grid-area: two;
+    }
+    .main-3 {
+        grid-area: three;
+    }
+    .main-3 {
+        grid-area: four;
+    }
+    .main-5 {
+        grid-area: five;
+    }
+}
+
+@media (max-width: 1440px) {
+    grid
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .wrapper {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 0.7fr 0.3fr;
+        grid-template-areas: 
+        "main sidebar"
+        "footer sidebar";  
+        column-gap: 5px;  
+    }
+    
+    .main {
+        grid-area: main;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "one three four"
+        "one five five"
+        "two five five";
+        column-gap: 15px;        
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    .footer {
+        grid-area: footer;
+    }
+    .main-1 {
+        grid-area: one;
+    }
+    .main-2 {
+        grid-area: two;
+    }
+    .main-3 {
+        grid-area: three;
+    }
+    .main-3 {
+        grid-area: four;
+    }
+    .main-5 {
+        grid-area: five;
+    }
+    .sidebar {
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
